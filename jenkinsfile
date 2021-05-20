@@ -50,13 +50,5 @@ pipeline{
     //         }
     //     }
   }
-  post{
-            failure {
-            mail to: 'efskwgkkwhae@inilogic.com', from: 'commonteesta@gmail.com',
-                subject: "Example Build: ${env.JOB_NAME} - failed", 
-                body: "Job failed - \"${env.JOB_NAME}\" build: ${env.BUILD_NUMBER}\n\nView the log at:\n ${env.BUILD_URL}"
 
-        }
-
-  }
 }
